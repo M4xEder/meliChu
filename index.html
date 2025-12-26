@@ -1,1 +1,109 @@
-index teste
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite</title>
+
+<style>
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+height: 100vh;
+}
+
+.container {
+position: relative;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+.container img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+animation: zoom 6s ease forwards;
+}
+
+.overlay {
+position: absolute;
+inset: 0;
+background: rgba(0, 0, 0, 0.45);
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 20px;
+}
+
+.texto {
+color: #fff;
+max-width: 700px;
+opacity: 0;
+transform: translateY(20px);
+animation: textoEntrar 1.5s ease forwards;
+animation-delay: 0.8s;
+}
+
+.texto h1 {
+margin-bottom: 15px;
+font-size: clamp(26px, 5vw, 38px);
+}
+
+.texto p {
+font-size: clamp(14px, 3.5vw, 18px);
+line-height: 1.5;
+margin: 8px 0;
+}
+
+@keyframes textoEntrar {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes zoom {
+from {
+transform: scale(1);
+}
+to {
+transform: scale(1.08);
+}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<img src="mercadolivre.jpg" alt="Imagem de fundo">
+
+<div class="overlay">
+<div class="texto">
+<h1>Rezagos e Retiros</h1>
+
+<p><strong>Churrasco virtual de encerramento do ano.</strong></p>
+
+<p>
+Transmissão no dia <strong>31/12</strong><br>
+Começa às <strong>13:00</strong> e encerra às <strong>22:00</strong>
+</p>
+
+<p>
+Ao fazer o depósito, me envie o comprovante para que eu possa liberar
+o link de acesso.
+</p>
+
+<p><strong>Uma experiência única.</strong><br>
+Aguardo vocês na live!</p>
+
+<p><strong>Feliz Natal e Feliz Ano Novo!!!</strong></p>
+</div>
+</div>
+</div>
+
+</body>
+</html>
